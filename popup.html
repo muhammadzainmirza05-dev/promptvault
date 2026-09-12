@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PromptVault</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <h1>🗄️ PromptVault</h1>
+    <button id="newBtn" class="primary">+ New</button>
+  </header>
+
+  <section id="editor" hidden>
+    <input id="titleInput" type="text" placeholder="Prompt title" maxlength="60" />
+    <textarea id="bodyInput" placeholder="Paste your prompt here..."></textarea>
+    <div class="row">
+      <button id="saveBtn" class="primary">Save</button>
+      <button id="cancelBtn">Cancel</button>
+    </div>
+  </section>
+
+  <input id="searchInput" type="search" placeholder="Search prompts…" />
+
+  <ul id="list"></ul>
+  <p id="empty" class="empty">No prompts yet. Click “+ New”.</p>
+  <p id="toast" class="toast" hidden></p>
+
+  <script src="popup.js"></script>
+</body>
+</html>

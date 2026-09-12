@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "PromptVault",
+  "version": "1.0.0",
+  "description": "Save, organize, and inject LLM prompts into any focused text field.",
+  "permissions": ["storage", "contextMenus", "activeTab"],
+  "action": {
+    "default_title": "PromptVault",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
